@@ -4,11 +4,11 @@ const employeeController = require('../controllers/employeeController');
 
 app.get("/", employeeController.getEmployee);
 
-app.get("/:id",employeeController.getProductsById);
+app.get("/:id",employeeController.getEmployeeById);
 
-app.get("/tax/:sal",employeeController.getProductsByName);
+app.get("/tax/:salary",employeeController.getSalary);
 
-app.get("/retire/:age",employeeController.getProductsByName);
+app.get("/retire/:age",employeeController.getTax);
 
 app.post("/",employeeController.addEmployee)
 

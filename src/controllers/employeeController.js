@@ -7,7 +7,15 @@ exports.getEmployeeById = async(req, res)=>{
 };
 
 exports.getSalary = async(req, res)=>{
-    res.send(` : ${req.body.salary}`);
+    const sal = req.params.salary;
+    const tax = (sal * 10) /100;
+    res.send(`Employee Salary: ${tax}`);
+};
+
+exports.getTax = async(req, res)=>{
+    const age = req.params.age;
+    const retire = 60 - age;
+    res.send(`Employee Retire: ${retire}`);
 };
 
 exports.addEmployee = async(req, res)=>{
